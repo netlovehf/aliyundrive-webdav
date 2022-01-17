@@ -11,6 +11,8 @@
 阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 [Infuse](https://firecore.com/infuse)、[nPlayer](https://nplayer.com)
 等实现在电视上直接观看云盘视频内容， 支持上传文件，但受限于 WebDAV 协议不支持文件秒传。
 
+如果你使用 Emby 或者 Jellyfin，也可以试试 [aliyundrive-fuse](https://github.com/messense/aliyundrive-fuse) 项目。
+
 如果项目对你有帮助，请考虑[捐赠支持](https://github.com/messense/aliyundrive-webdav/discussions/126)项目持续维护。
 
 ## 安装
@@ -33,12 +35,12 @@ sudo snap install aliyundrive-webdav
 aarch64/arm/mipsel/x86_64/i686 等架构的版本，可以下载后使用 opkg 安装，以 nanopi r4s 为例：
 
 ```bash
-wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.0/aliyundrive-webdav_1.1.0_aarch64_generic.ipk
-wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.0/luci-app-aliyundrive-webdav_1.1.0_all.ipk
-wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.0/luci-i18n-aliyundrive-webdav-zh-cn_1.1.0-1_all.ipk
-opkg install aliyundrive-webdav_1.1.0_aarch64_generic.ipk
-opkg install luci-app-aliyundrive-webdav_1.1.0_all.ipk
-opkg install luci-i18n-aliyundrive-webdav-zh-cn_1.1.0-1_all.ipk
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.1/aliyundrive-webdav_1.1.1_aarch64_generic.ipk
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.1/luci-app-aliyundrive-webdav_1.1.1_all.ipk
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.1.1/luci-i18n-aliyundrive-webdav-zh-cn_1.1.1-1_all.ipk
+opkg install aliyundrive-webdav_1.1.1_aarch64_generic.ipk
+opkg install luci-app-aliyundrive-webdav_1.1.1_all.ipk
+opkg install luci-i18n-aliyundrive-webdav-zh-cn_1.1.1-1_all.ipk
 ```
 
 其它 CPU 架构的路由器可在 [GitHub Releases](https://github.com/messense/aliyundrive-webdav/releases) 页面中查找对应的架构的主程序 ipk 文件下载安装， 常见
@@ -114,7 +116,7 @@ services:
 
 ```bash
 $ aliyundrive-webdav --help
-aliyundrive-webdav 1.1.0
+aliyundrive-webdav 1.1.1
 
 USAGE:
     aliyundrive-webdav [FLAGS] [OPTIONS] --refresh-token <refresh-token>
